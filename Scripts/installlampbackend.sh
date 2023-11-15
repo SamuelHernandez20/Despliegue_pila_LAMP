@@ -22,4 +22,3 @@ source .env
 sed -i "s/127.0.0.1/$MYSQL_PRIVATE/" /etc/mysql/mysql.conf.d/mysqld.cnf
 
 
-
