@@ -3,10 +3,7 @@
 #Muestra comandos que se van ejecutando por si falla
 set -x
 
-# Actualizamos los repos
-
-apt update
-
+# Variables:
 
 source .env
 
