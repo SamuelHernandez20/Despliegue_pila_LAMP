@@ -80,4 +80,17 @@ wp plugin update --path=/var/www/html --all --allow-root
 wp plugin install bbpress --activate --path=/var/www/html --allow-root
 
 
+wp plugin install wps-hide-login --activate --path=/var/www/html --allow-root
+# Nombre de la entrada
+
+wp rewrite structure '/%postname%/' \
+  --path=/var/www/html \
+  --allow-root
+
+# reescritura
+
+a2enmod rewrite
+
+cp /home/ubuntu/practica01-09/htaccess/.htaccess /var/www/html/
+
 chown -R www-data:www-data /var/www/html
