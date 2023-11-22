@@ -87,6 +87,9 @@ wp rewrite structure '/%postname%/' \
   --path=/var/www/html \
   --allow-root
 
+
+wp option update whl_page "candado" --path=/var/www/html --allow-root
+
 # reescritura
 
 a2enmod rewrite
@@ -94,3 +97,4 @@ a2enmod rewrite
 cp /home/ubuntu/practica01-09/htaccess/.htaccess /var/www/html/
 
 chown -R www-data:www-data /var/www/html
+
