@@ -61,7 +61,7 @@ chown -R www-data:www-data /var/www/html
 Incluir variables
 ``````
 source .env
-``````/var/www/html/
+``````
 Eliminar descargas previas:
 
 ``````
