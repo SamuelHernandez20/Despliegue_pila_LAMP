@@ -160,3 +160,5 @@ Cambiar propietario:
 ``````
 chown -R www-data:www-data /var/www/html
 ``````
+## 2. Configuración del Backend:
+
