@@ -187,7 +187,6 @@ Reiniciamos servicio
 systemctl restart mysql
 ``````
 ### 2.2 Despliegue del deploy_backend.sh:
-#!/bin/bash
 
 Muestra comandos que se van ejecutando por si falla
 
