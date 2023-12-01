@@ -77,7 +77,7 @@ Permisos de ejecución al archivo:
 ``````
 chmod +x /tmp/wp-cli.phar
 ``````
-Movemos la utlidad y de esta forma lo podemos usar sin poner la ruta completa:
+Movemos la utlidad y de esta forma lo podemos usar sin poner la ruta completa:``````
 
 ``````
 mv /tmp/wp-cli.phar /usr/local/bin/wp
@@ -161,4 +161,26 @@ Cambiar propietario:
 chown -R www-data:www-data /var/www/html
 ``````
 ## 2. Configuración del Backend:
+
+### 2.1 Despliegue del install_lamp_backend.sh
+
+Instalar SGBD de mysql
+
+``````
+apt install mysql-server -y
+``````
+Nos traemos las variables del **.env**
+
+``````
+source .env
+``````
+Configuramos el mysql  para que acepete conxiones desde la ip privada, para ello se hará de una manera automatizada:
+
+``````
+sed -i "s/127.0.0.1/$MYSQL_PRIVATE/" /etc/mysql/mysql.conf.d/mysqld.cnf
+``````
+
+# reiniciamos servicio
+
+systemctl restart mysql
 
