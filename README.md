@@ -17,3 +17,42 @@ Para ello tendremos una configuración de archivos y directorios de esta forma:
     └── deploy_backend.sh
 
 ``````
+
+## 1. Configuración del Frontend:
+
+### 1.1 Despliegue del install_lamp_frontend.sh:
+
+Instalamos apache
+
+``````
+apt install apache2 -y
+``````
+
+Instalacion del php
+
+``````
+apt install php libapache2-mod-php php-mysql -y
+``````
+
+Copiar el archivo de conf de apache
+
+``````
+cp ../conf/000-default.conf /etc/apache2/sites-available 
+``````
+
+Reiniciar servicio
+
+``````
+systemctl restart apache2
+``````
+
+copiar archivo php:
+
+``````
+cp ../php/index.php /var/www/html
+``````
+modificar el propietario y grupo de /var/www/html para usuario de apache
+
+``````
+chown -R www-data:www-data /var/www/html
+``````
