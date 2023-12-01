@@ -174,7 +174,8 @@ Nos traemos las variables del **.env**
 ``````
 source .env
 ``````
-Configuramos el mysql  para que acepete conxiones desde la ip privada, para ello se hará de una manera automatizada:
+Configuramos el mysql  para que acepete conxiones desde la ip privada, para ello se hará de una manera automatizada
+para permitir que se acepten no solo conexiones desde la misma máquina:
 
 ``````
 sed -i "s/127.0.0.1/$MYSQL_PRIVATE/" /etc/mysql/mysql.conf.d/mysqld.cnf
