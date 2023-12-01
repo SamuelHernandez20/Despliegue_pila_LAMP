@@ -56,3 +56,7 @@ modificar el propietario y grupo de /var/www/html para usuario de apache
 ``````
 chown -R www-data:www-data /var/www/html
 ``````
+### 1.2 Despliegue del deploy_fontend.sh:
+
+
+
