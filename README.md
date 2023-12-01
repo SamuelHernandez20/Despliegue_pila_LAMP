@@ -199,7 +199,7 @@ Desde este otro archivo incluiremos nuevamente las variables del **.env**:
 source .env
 ``````
 
-Realizamos la creación del usuario, base de datos y otorgación de permisos:
+Realizamos la creación del usuario, base de datos y otorgación de permisos (la dirección ip qdel usuario que se permitirá sera la de la maquina frontend, su ip privada):
 
 ``````
 mysql -u root <<< "DROP DATABASE IF EXISTS $WORDPRESS_DB_NAME"
